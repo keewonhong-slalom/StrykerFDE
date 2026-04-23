@@ -1,3 +1,1 @@
 # Stryker FDE Team
-
-Hello World! 
