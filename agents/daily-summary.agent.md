@@ -83,6 +83,20 @@ Concrete next steps beyond the action items table — upcoming meetings, milesto
 - If the file already exists, ask the user before overwriting.
 - After saving, confirm the file path to the user and offer to open it.
 
+## Step 5 — Generate Teams Message
+
+After saving the summary, produce a concise Teams channel message the user can copy and post. Format it as plain text with light Markdown (bold via `**`, bullet points) that renders well in Microsoft Teams.
+
+The message must:
+- Open with a bold date header: **FDE Team Update — <Month Day, YYYY>**
+- Summarize the 3–5 most important highlights in short, plain-language bullets — no jargon or internal names without context
+- Include a **Key Decisions** section if any meaningful decisions were made (2–3 bullet max)
+- Close with a **Coming Up / Next Steps** section listing 2–4 concrete upcoming actions or meetings
+- End with a line crediting owners for immediate action items (e.g., "Owners: …")
+- Stay under ~250 words total — this is a channel post, not a report
+
+Output the Teams message directly as formatted text — do not wrap it in a code block or any markup container.
+
 ## Constraints
 
 - DO NOT edit or modify any file inside `raw/` — treat it as read-only.
