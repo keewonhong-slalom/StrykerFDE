@@ -85,17 +85,30 @@ Concrete next steps beyond the action items table — upcoming meetings, milesto
 
 ## Step 5 — Generate Teams Message
 
-After saving the summary, produce a concise Teams channel message the user can copy and post. Format it as plain text with light Markdown (bold via `**`, bullet points) that renders well in Microsoft Teams.
+After saving the summary, produce a concise Teams channel message the user can paste directly into Microsoft Teams. Use only plain text — no Markdown syntax, no asterisks, no backticks, no pound signs. Use ALL CAPS for section headers and a dash (-) for bullet points.
 
 The message must:
-- Open with a bold date header: **FDE Team Update — <Month Day, YYYY>**
-- Summarize the 3–5 most important highlights in short, plain-language bullets — no jargon or internal names without context
-- Include a **Key Decisions** section if any meaningful decisions were made (2–3 bullet max)
-- Close with a **Coming Up / Next Steps** section listing 2–4 concrete upcoming actions or meetings
-- End with a line crediting owners for immediate action items (e.g., "Owners: …")
+- Open with the header: FDE TEAM UPDATE — <Month Day, YYYY>
+- Summarize the 3–5 most important highlights as short, plain-language bullet points — no jargon or internal names without context
+- Include a KEY DECISIONS section if any meaningful decisions were made (2–3 bullets max)
+- Close with a COMING UP / NEXT STEPS section listing 2–4 concrete upcoming actions or meetings
 - Stay under ~250 words total — this is a channel post, not a report
 
-Output the Teams message directly as formatted text — do not wrap it in a code block or any markup container.
+Output the message as plain text with no surrounding code blocks or markup.
+
+## Step 6 — Generate Action Items Teams Message
+
+After Step 5, produce a second Teams message containing the full, detailed list of action items for the day. Use only plain text — no Markdown syntax, no asterisks, no backticks, no pound signs. Use ALL CAPS for owner headers and a dash (-) for bullet points.
+
+The message must:
+- Open with the header: FDE ACTION ITEMS — <Month Day, YYYY>
+- List every action item from the summary's Action Items & Tasks table, grouped by owner
+- For each owner, use their name in ALL CAPS as a subheader, followed by their tasks as bullet points
+- Each bullet must include: task description, due date (or TBD), and priority in brackets — [High], [Medium], or [Low]
+- If an owner has no tasks, omit them
+- Close with a line showing the total count: Total action items: N
+
+Output the message as plain text with no surrounding code blocks or markup.
 
 ## Constraints
 
