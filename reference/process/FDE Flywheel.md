@@ -54,4 +54,5 @@ What should the prototype prove?
 	- May require very high fidelity solution to mirror production benefits
 
 - Validate technical feasibility 
-	- Validate data availability/
+	- Validate data availability/integrations
+	- Validate 
