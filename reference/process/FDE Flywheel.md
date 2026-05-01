@@ -43,9 +43,13 @@ Reference artifact: `Stryker_UseCase_Scoring_Template.xlsx`
 
 ## Goals of "Prototype"
 
+What should the prototype prove?
 
 - Validate what we heard
 - Validating what we see as the future vision
 - Confirm requirements by getting business team's reaction
 - Understand what else we need to know/prove out - scope follow-on prototype
-- Validate feasibility
+- Validate feasibility on the AI side 
+- Support deeper scoping/deeper requirements solicitation
+- Validate time savings/potential gains 
+	- May require very high fidelity solution to mirror production
