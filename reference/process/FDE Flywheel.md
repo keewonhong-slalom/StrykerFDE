@@ -52,4 +52,4 @@ What should the prototype prove?
 - Validate feasibility on the AI side 
 - Support deeper scoping/deeper requirements solicitation
 - Validate time savings/potential gains 
-	- May require very high fidelity solution to mirror production
+	- May require very high fidelity solution to mirror production benefits
