@@ -47,4 +47,5 @@ Reference artifact: `Stryker_UseCase_Scoring_Template.xlsx`
 - Validate what we heard
 - Validating what we see as the future vision
 - Confirm requirements by getting business team's reaction
-- Understand what else we need to know/prove out - scope fo
+- Understand what else we need to know/prove out - scope follow-on prototype
+- 
