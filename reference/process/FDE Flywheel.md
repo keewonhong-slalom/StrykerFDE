@@ -66,6 +66,7 @@ What should the prototype prove?
 	- No integrations with data
 	- No integrations with AI
 	- Demonstrates a single user story/requirement
+	- Not dependent 
 - Type B
 	- 24-48 hours
 	- No/minimal UI
