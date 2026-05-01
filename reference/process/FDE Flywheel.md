@@ -82,3 +82,7 @@ What should the prototype prove?
 	- UI 
 	- Integrated with Stryker's data/systems
 	- Live interaction
+
+Prototype (A, B, C) - > D .... -> ...... -> Production build
+
+
