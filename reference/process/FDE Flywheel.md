@@ -52,12 +52,9 @@ What should the prototype prove?
 - Support deeper scoping/deeper requirements solicitation
 - Validate time savings/potential gains 
 	- May require very high fidelity solution to mirror production benefits
-
 - Validate technical feasibility 
 	- Validate data availability/integrations
 	- Validate feasibility of AI (can we achieve required accuracy?)
-
-
 ## Prototype Types (?)
 
 - Type A
@@ -79,6 +76,7 @@ What should the prototype prove?
 	- Integrated with AI
 	- Live interaction
 	- Demonstrates a single user story/requirement
+	- Requires connection to Stryker AI
 - Type D
 	- 1-3 weeks  
 	- Integrated with Stryker's data/systems
