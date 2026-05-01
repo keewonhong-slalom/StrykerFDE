@@ -68,5 +68,6 @@ What should the prototype prove?
 - Type B
 	- 24-48 hours
 	- No/minimal UI
-	- "Technic"
+	- "Technical spike"
+	- Proves a single integration or single data 
 - Type C
