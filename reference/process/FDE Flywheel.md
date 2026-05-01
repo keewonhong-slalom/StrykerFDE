@@ -63,7 +63,7 @@ What should the prototype prove?
 - Type A
 	- 24-48 hour timebox
 	- Scripted 
-	- Demonstrates a flow/expe
+	- Demonstrates a flow/experience without actual interactions
 	- No integrations with data
 	- No integrations with AI
 	- Demonstrates a single user story/requirement
