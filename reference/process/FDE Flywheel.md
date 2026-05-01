@@ -41,7 +41,7 @@ Reference artifact: `Stryker_UseCase_Scoring_Template.xlsx`
 - What is the goal of the prototype? What should the prototype prove?
 
 
-Goals of Prototype
+## Goals of "Prototype"
 
 - Validate what we heard
 - Validating what we see as the future vision
