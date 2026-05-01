@@ -66,5 +66,6 @@ What should the prototype prove?
 	- No integrations with AI
 	- Demonstrates a single user story/requirement
 - Type B
-- 
+	- 24-48 hours
+	- No
 - Type C
