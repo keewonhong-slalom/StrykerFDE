@@ -75,6 +75,7 @@ What should the prototype prove?
 	- UI 
 	- Integrated with AI
 	- Live interaction
+	- 	- Demonstrates a single user story/requirement
 - - Type C
 	- UI 
 	- Integrated with data
