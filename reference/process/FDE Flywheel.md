@@ -58,4 +58,10 @@ What should the prototype prove?
 	- Validate feasibility of AI (can we achieve required accuracy?)
 
 
-## Pro
+## Prototype Types (?)
+
+- Type A
+	- Low effort
+	- No integrations with data
+	- No integrations with AI
+	- Demostrat
