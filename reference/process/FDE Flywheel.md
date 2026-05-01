@@ -66,4 +66,5 @@ What should the prototype prove?
 	- No integrations with AI
 	- Demonstrates a single user story/requirement
 - Type B
+- 
 - Type C
