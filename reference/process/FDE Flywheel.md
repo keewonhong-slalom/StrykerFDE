@@ -69,5 +69,6 @@ What should the prototype prove?
 	- 24-48 hours
 	- No/minimal UI
 	- "Technical spike"
-	- Proves a single integration or single data 
+	- Proves a single integration or single data activity 
 - Type C
+	- 
