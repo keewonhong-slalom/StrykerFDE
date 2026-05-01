@@ -57,7 +57,7 @@ What should the prototype prove?
 	- Validate feasibility of AI (can we achieve required accuracy?)
 ## Prototype Types (?)
 
-Action item - ne
+Action item - need better names
 
 - Type A
 	- 24-48 hour timebox
