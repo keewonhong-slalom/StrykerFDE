@@ -55,4 +55,4 @@ What should the prototype prove?
 
 - Validate technical feasibility 
 	- Validate data availability/integrations
-	- Validate 
+	- Validate feasibility of AI 
