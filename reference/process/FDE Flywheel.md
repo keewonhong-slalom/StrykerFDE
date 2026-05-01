@@ -44,5 +44,6 @@ Reference artifact: `Stryker_UseCase_Scoring_Template.xlsx`
 Goals of Prototype
 
 - Validate what we heard
-- Validating what we see as the fu
+- Validating what we see as the future vision
 - Confirm requirements 
+- 
