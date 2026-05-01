@@ -66,12 +66,13 @@ What should the prototype prove?
 	- No integrations with data
 	- No integrations with AI
 	- Demonstrates a single user story/requirement
-	- Not dependent 
+	- Not dependent on Stryker env
 - Type B
 	- 24-48 hours
 	- No/minimal UI
 	- "Technical spike"
 	- Proves a single integration or single data activity 
+	- Not dependent on Stryker env
 - Type C
 	- 24-28 hour timebox - multiple team skillsets involved (AI + CX)
 	- UI 
@@ -81,7 +82,7 @@ What should the prototype prove?
 - Type D
 	- 1-3 weeks  
 	- Integrated with Stryker's data/systems
-	- Live interaction
+	- UI with live interaction
 	- Results in metrics to inform if this should move forward to production
 		- Estimated time savings, accuracy, etc. 
 
