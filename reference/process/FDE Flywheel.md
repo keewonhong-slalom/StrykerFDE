@@ -67,5 +67,6 @@ What should the prototype prove?
 	- Demonstrates a single user story/requirement
 - Type B
 	- 24-48 hours
-	- No
+	- No/minimal UI
+	- "Technic"
 - Type C
