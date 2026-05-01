@@ -48,4 +48,4 @@ Reference artifact: `Stryker_UseCase_Scoring_Template.xlsx`
 - Validating what we see as the future vision
 - Confirm requirements by getting business team's reaction
 - Understand what else we need to know/prove out - scope follow-on prototype
-- Validate reaso
+- Validate feasibility accuracy 
