@@ -46,5 +46,5 @@ Reference artifact: `Stryker_UseCase_Scoring_Template.xlsx`
 
 - Validate what we heard
 - Validating what we see as the future vision
-- Confirm requirements 
+- Confirm requirements by getting business team's reaction
 - 
