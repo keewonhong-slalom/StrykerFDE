@@ -64,4 +64,5 @@ What should the prototype prove?
 	- Low effort
 	- No integrations with data
 	- No integrations with AI
-	- Demostrat
+	- Demonstrates a single user story/requirement
+	- 
