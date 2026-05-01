@@ -55,32 +55,32 @@ What should the prototype prove?
 - Validate technical feasibility 
 	- Validate data availability/integrations
 	- Validate feasibility of AI (can we achieve required accuracy?)
-## Prototype Types (?)
+## Prototype Types
 
 Action item - need better names
 	Bones???? Joints????
 
-- Type A
+- Type A - Ulna
 	- 24-48 hour timebox
 	- Scripted 
 	- No integrations with data
 	- No integrations with AI
 	- Demonstrates a single user story/requirement
 	- Not dependent on Stryker env
-- Type B
+- Type B - Radius
 	- 24-48 hours
 	- No/minimal UI
 	- "Technical spike"
-	- Proves a single integration or single data activity 
+	- Proves a single integration, single data activity, or single AI task 
 	- Not dependent on Stryker env
-- Type C
+- Type C - Metacarpal (or Forearm?)
 	- 24-28 hour timebox - multiple team skillsets involved (AI + CX)
 	- UI 
 	- Integrated with AI
 	- Live interaction
 	- Demonstrates a single user story/requirement
 	- Requires connection to Stryker AI
-- Type D
+- Type D - Brachium
 	- 1-3 weeks  
 	- Integrated with Stryker's data/systems
 	- UI with live interaction
