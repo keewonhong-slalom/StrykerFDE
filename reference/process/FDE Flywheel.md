@@ -52,5 +52,6 @@ What should the prototype prove?
 - Support deeper scoping/deeper requirements solicitation
 - Validate time savings/potential gains 
 	- May require very high fidelity solution to mirror production benefits
+
 - Validate technical feasibility 
 	- Validate 
