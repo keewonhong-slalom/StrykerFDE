@@ -79,12 +79,11 @@ What should the prototype prove?
 	- Live interaction
 	- Demonstrates a single user story/requirement
 - Type D
-	- 1-3 weeks 
-	- UI 
+	- 1-3 weeks  
 	- Integrated with Stryker's data/systems
 	- Live interaction
 	- Results in metrics to inform if this should move forward to production
-		- Estimated 
+		- Estimated time savings, accuracy, etc. 
 
 
 Prototype (A, B, C) - > Dev MVP -> UAT/Piloting -> Production build
