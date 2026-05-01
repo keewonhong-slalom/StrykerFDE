@@ -58,3 +58,4 @@ What should the prototype prove?
 	- Validate feasibility of AI (can we achieve required accuracy?)
 
 
+## Pro
