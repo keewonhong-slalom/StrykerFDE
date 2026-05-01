@@ -58,6 +58,7 @@ What should the prototype prove?
 ## Prototype Types (?)
 
 Action item - need better names
+	Bones???? Joints????
 
 - Type A
 	- 24-48 hour timebox
