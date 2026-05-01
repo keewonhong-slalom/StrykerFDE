@@ -63,7 +63,6 @@ What should the prototype prove?
 - Type A
 	- 24-48 hour timebox
 	- Scripted 
-	- Demonstrates a flow/experience without actual interactions
 	- No integrations with data
 	- No integrations with AI
 	- Demonstrates a single user story/requirement
@@ -73,4 +72,8 @@ What should the prototype prove?
 	- "Technical spike"
 	- Proves a single integration or single data activity 
 - Type C
+	- UI 
+	- Integrated with AI
+	
+	- Live interaction
 	- 
