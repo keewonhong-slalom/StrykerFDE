@@ -41,4 +41,6 @@ Reference artifact: `Stryker_UseCase_Scoring_Template.xlsx`
 - What is the goal of the prototype? What should the prototype prove?
 
 
-Goals of Pr
+Goals of Prototype
+
+- Va
