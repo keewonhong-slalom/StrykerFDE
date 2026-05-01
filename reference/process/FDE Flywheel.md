@@ -61,7 +61,7 @@ What should the prototype prove?
 ## Prototype Types (?)
 
 - Type A
-	- Low effort
+	- 24-48 hour timebox
 	- No integrations with data
 	- No integrations with AI
 	- Demonstrates a single user story/requirement
