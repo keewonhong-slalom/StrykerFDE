@@ -72,11 +72,12 @@ What should the prototype prove?
 	- "Technical spike"
 	- Proves a single integration or single data activity 
 - Type C
+	- 24-28 hour timebox - multiple team skillsets involved (AI + CX)
 	- UI 
 	- Integrated with AI
 	- Live interaction
-	- 	- Demonstrates a single user story/requirement
-- - Type C
+	- Demonstrates a single user story/requirement
+- Type D
 	- UI 
 	- Integrated with data
 	- Live interaction
