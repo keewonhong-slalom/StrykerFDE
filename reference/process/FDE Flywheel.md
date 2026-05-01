@@ -80,5 +80,5 @@ What should the prototype prove?
 	- Demonstrates a single user story/requirement
 - Type D
 	- UI 
-	- Integrated with data
+	- Integrated with Stryker's data/systems
 	- Live interaction
