@@ -75,7 +75,8 @@ Action item - need better names
 	- Proves a single integration, single data activity, or single AI task 
 	- Not dependent on Stryker env
 - Type C - Metacarpal (or Forearm?)
-	- 24-28 hour timebox - multiple team skillsets involved (AI + CX)
+	- 48-72 hrs
+	- Multiple team skillsets involved (AI + CX)
 	- UI 
 	- Integrated with AI
 	- Live interaction
@@ -87,6 +88,7 @@ Action item - need better names
 	- Stryker IT must be ready to accept this
 	- Integrated with Stryker's data/systems
 	- UI with live interaction
+	- Demonstrates multiple requirements/user stories
 	- Involves a pilot
 	- Results in metrics to inform if this should move forward to production
 		- Estimated time savings, accuracy, etc. 
