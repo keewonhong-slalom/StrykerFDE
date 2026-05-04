@@ -91,3 +91,10 @@ Action item - need better names
 Prototype (A, B, C) - > Dev MVP -> UAT/Piloting -> Production build
 
 
+Notes from Nicole- should cross-check against this
+
+Team, one thing I am observing with FDE engagements is a need for the internal team to define what a prototype is in terms of level of fidelity. You can determine the criteria, e.g. uses mock data versus a true sample set, has security credentials or other verification, more sophisticated technology (like OCR), etc; whatever you deem as a low/medium/high fidelity. Everything will be working code, but want to make sure you are aligned so that you know where to spend your time effectively. This is going to become vitally important as you start showing things to Alfonso, et al  - he may be happy with low lift examples to see that we are guiding the conversations with teams in the right direction. 
+
+The other factor will be determining what's needed for the hand offs as you start working with engineering teams to take things to production, e.g. you may have to do a high fidelity version that engages with SSO, et al to make sure that it could be deployed. 
+
+Btw, the FDE tiger team is trying to find a different word to use than prototype for the high fidelity versions, lmk if you have any suggestions  Prototype makes it sound more toss away than it will likely be in terms of working code.
