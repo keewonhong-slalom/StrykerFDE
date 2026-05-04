@@ -82,8 +82,11 @@ Action item - need better names
 	- Requires connection to Stryker AI
 - Type D - Brachium
 	- 1-3 weeks  
+	- Gated - will get signoff from Alfonso & team to make sure we should be spending this time
+	- Stryker IT must be ready to accept this
 	- Integrated with Stryker's data/systems
 	- UI with live interaction
+	- Involves a pilot
 	- Results in metrics to inform if this should move forward to production
 		- Estimated time savings, accuracy, etc. 
 
