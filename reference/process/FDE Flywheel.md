@@ -50,11 +50,12 @@ What should the prototype prove?
 - Confirm requirements by getting business team's reaction
 - Understand what else we need to know/prove out - scope follow-on prototype
 - Support deeper scoping/deeper requirements solicitation
-- Validate time savings/potential gains 
+- Validate the expected impact (time savings, process improvements, reduced effort, etc.)
 	- May require very high fidelity solution to mirror production benefits
 - Validate technical feasibility 
-	- Validate data availability/integrations
-	- Validate feasibility of AI (can we achieve required accuracy?)
+	- Integrations
+	- Data accessibility
+	- AI feasibility & expected accuracy 
 ## Prototype Types
 
 Action item - need better names
