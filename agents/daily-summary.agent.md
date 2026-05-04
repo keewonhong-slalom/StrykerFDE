@@ -85,30 +85,40 @@ Concrete next steps beyond the action items table — upcoming meetings, milesto
 
 ## Step 5 — Generate Teams Message
 
-After saving the summary, produce a concise Teams channel message the user can paste directly into Microsoft Teams. Use only plain text — no Markdown syntax, no asterisks, no backticks, no pound signs. Use ALL CAPS for section headers and a dash (-) for bullet points.
+After saving the summary, produce a concise Teams channel message the user can paste directly into Microsoft Teams. Use Teams-native formatting that renders correctly when pasted:
+- **bold** (double asterisks) for section headers and key terms
+- *italic* (single asterisks) for secondary labels or qualifiers
+- A dash and space (- ) for bullet points
+- A blank line between sections for visual spacing
 
 The message must:
-- Open with the header: FDE TEAM UPDATE — <Month Day, YYYY>
-- Summarize the 3–5 most important highlights as short, plain-language bullet points — no jargon or internal names without context
-- Include a KEY DECISIONS section if any meaningful decisions were made (2–3 bullets max)
-- Close with a COMING UP / NEXT STEPS section listing 2–4 concrete upcoming actions or meetings
+- Open with a bold header: **FDE Team Update — <Month Day, YYYY>**
+- Summarize the 3–5 most important highlights as short bullet points — no jargon or internal names without context
+- Include a **Key Decisions** section if any meaningful decisions were made (2–3 bullets max)
+- Close with a **Coming Up / Next Steps** section listing 2–4 concrete upcoming actions or meetings
 - Stay under ~250 words total — this is a channel post, not a report
 
-Output the message as plain text with no surrounding code blocks or markup.
+Wrap the entire message in a fenced code block (` ```
+ `) so the user gets a one-click copy button in VS Code and Obsidian.
 
 ## Step 6 — Generate Action Items Teams Message
 
-After Step 5, produce a second Teams message containing the full, detailed list of action items for the day. Use only plain text — no Markdown syntax, no asterisks, no backticks, no pound signs. Use ALL CAPS for owner headers and a dash (-) for bullet points.
+After Step 5, produce a second Teams message containing the full, detailed list of action items for the day. Use Teams-native formatting that renders correctly when pasted:
+- **bold** (double asterisks) for the header and owner names
+- *italic* (single asterisks) for due dates
+- A dash and space (- ) for bullet points
+- A blank line between owner sections for visual spacing
 
 The message must:
-- Open with the header: FDE ACTION ITEMS — <Month Day, YYYY>
+- Open with a bold header: **FDE Action Items — <Month Day, YYYY>**
 - List every action item from the summary's Action Items & Tasks table, grouped by owner
-- For each owner, use their name in ALL CAPS as a subheader, followed by their tasks as bullet points
-- Each bullet must include: task description, due date (or TBD), and priority in brackets — [High], [Medium], or [Low]
+- For each owner, use their name in bold as a subheader (e.g. **Victoria Austin**), followed by their tasks as bullet points
+- Each bullet must include: task description, *Due: <date or TBD>*, and priority in brackets — [High], [Medium], or [Low]
 - If an owner has no tasks, omit them
-- Close with a line showing the total count: Total action items: N
+- Close with a bold total count line: **Total action items: N**
 
-Output the message as plain text with no surrounding code blocks or markup.
+Wrap the entire message in a fenced code block (` ```
+ `) so the user gets a one-click copy button in VS Code and Obsidian.
 
 ## Constraints
 
