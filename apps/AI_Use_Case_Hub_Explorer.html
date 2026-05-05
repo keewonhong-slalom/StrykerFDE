@@ -68,10 +68,12 @@ td.exp-col{padding:4px 6px;text-align:center}
 <div class="toolbar">
   <div class="search-wrap"><input type="search" id="search" placeholder="Search use case, product, submitter, area..."></div>
   <button id="col-btn">Columns ▾</button>
+  <button id="notes-filter-btn">🗒 Has Notes</button>
   <button id="clear-btn">Clear all filters</button>
-  <label>Export: <button id="csv-btn">CSV</button></label>
+  <label>Export: <button id="csv-all-btn">CSV (all)</button> <button id="csv-sel-btn">CSV (selected)</button></label>
 </div>
 <div id="col-panel" style="display:none;background:#fff;border:1px solid #d0cec8;border-radius:8px;padding:12px;margin-bottom:8px">
+  <div style="display:flex;gap:6px;margin-bottom:8px"><button id="col-all-btn">Select All</button><button id="col-none-btn">Deselect All</button></div>
   <div id="col-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px"></div>
 </div>
 <div class="filter-row" id="filter-row"></div>
@@ -99,6 +101,7 @@ function saveNotes() { localStorage.setItem('fde-hub-notes', JSON.stringify(NOTE
 function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 const EXPAND_FIELDS = ['Problem Statement','Description','AI Solution or Tools of Interest','Comments','Executive Summary'];
 let expandedIds = new Set();
+let showNotesOnly = false;
 
 let visibleCols = [...DEFAULT_COLS, 'Notes'];
 let filters = {};
@@ -130,8 +133,9 @@ function buildFilters() {
 }
 
 function buildColPanel() {
+  const allColsList = [...ALL_COLS, 'Notes'];
   const grid = document.getElementById('col-grid');
-  grid.innerHTML = [...ALL_COLS, 'Notes'].map(c => `<label><input type="checkbox" value="${c}"${visibleCols.includes(c)?' checked':''}> ${c}</label>`).join('');
+  grid.innerHTML = allColsList.map(c => `<label><input type="checkbox" value="${c}"${visibleCols.includes(c)?' checked':''}> ${c}</label>`).join('');
   grid.querySelectorAll('input').forEach(cb => {
     cb.onchange = () => {
       if(cb.checked) { if(!visibleCols.includes(cb.value)) visibleCols.push(cb.value); }
@@ -139,6 +143,16 @@ function buildColPanel() {
       render();
     };
   });
+  document.getElementById('col-all-btn').onclick = () => {
+    visibleCols = [...allColsList];
+    buildColPanel();
+    render();
+  };
+  document.getElementById('col-none-btn').onclick = () => {
+    visibleCols = [];
+    buildColPanel();
+    render();
+  };
 }
 
 function applyFilters() {
@@ -154,6 +168,7 @@ function applyFilters() {
     for(const [col, vals] of Object.entries(excludes)) {
       if(vals && vals.has(String(r[col]||''))) return false;
     }
+    if(showNotesOnly && !NOTES[r['ID']]) return false;
     return true;
   });
   filtered.sort((a,b) => {
@@ -253,7 +268,13 @@ function render() {
 }
 
 document.getElementById('search').oninput = e => { searchQ=e.target.value; page=0; render(); };
-document.getElementById('clear-btn').onclick = () => { filters={}; excludes={}; searchQ=''; document.getElementById('search').value=''; buildFilters(); page=0; render(); };
+document.getElementById('notes-filter-btn').onclick = () => {
+  showNotesOnly = !showNotesOnly;
+  document.getElementById('notes-filter-btn').style.background = showNotesOnly ? '#fffbe6' : '';
+  document.getElementById('notes-filter-btn').style.borderColor = showNotesOnly ? '#b0a8f0' : '';
+  page=0; render();
+};
+document.getElementById('clear-btn').onclick = () => { filters={}; excludes={}; searchQ=''; showNotesOnly=false; document.getElementById('search').value=''; document.getElementById('notes-filter-btn').style.background=''; document.getElementById('notes-filter-btn').style.borderColor=''; buildFilters(); page=0; render(); };
 document.getElementById('psize').onchange = e => { pageSize=Number(e.target.value); page=0; render(); };
 document.getElementById('prev').onclick = () => { if(page>0){page--;render();} };
 document.getElementById('next').onclick = () => { page++; render(); };
@@ -262,14 +283,15 @@ document.getElementById('col-btn').onclick = () => {
   p.style.display = p.style.display==='none'?'block':'none';
   if(p.style.display==='block') buildColPanel();
 };
-document.getElementById('csv-btn').onclick = () => {
-  const allCols = [...ALL_COLS, 'Notes'];
-  const rows = [allCols.join(','), ...filtered.map(r => allCols.map(c => JSON.stringify(c==='Notes'?(NOTES[r['ID']]||''):r[c]??'')).join(','))];
+function exportCSV(cols, filename) {
+  const rows = [cols.join(','), ...filtered.map(r => cols.map(c => JSON.stringify(c==='Notes'?(NOTES[r['ID']]||''):r[c]??'')).join(','))];
   const a = document.createElement('a');
   a.href = 'data:text/csv,' + encodeURIComponent(rows.join('\n'));
-  a.download = 'ai_use_case_hub_filtered.csv';
+  a.download = filename;
   a.click();
-};
+}
+document.getElementById('csv-all-btn').onclick = () => exportCSV([...ALL_COLS, 'Notes'], 'ai_use_case_hub_all.csv');
+document.getElementById('csv-sel-btn').onclick = () => exportCSV(visibleCols, 'ai_use_case_hub_selected.csv');
 
 document.querySelector('.table-wrap').addEventListener('click', e => {
   const expBtn = e.target.closest('.expand-btn');
