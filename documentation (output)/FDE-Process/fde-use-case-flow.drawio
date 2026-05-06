@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="2300" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ═══ TITLE ═══ -->
+    <mxCell id="title" value="FDE Use Case Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#23395d;" vertex="1" parent="1">
+      <mxGeometry x="270" y="10" width="360" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ═══ LEGEND ═══ -->
+    <mxCell id="leg-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" vertex="1" parent="1">
+      <mxGeometry x="700" y="30" width="200" height="200" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="712" y="38" width="80" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-proc" value="Process Step" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="712" y="62" width="120" height="24" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-gate" value="Decision" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="712" y="92" width="120" height="34" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-sg" value="🔒 Stage Gate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="712" y="132" width="120" height="24" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-se" value="Start / End" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;arcSize=50;" vertex="1" parent="1">
+      <mxGeometry x="712" y="162" width="120" height="24" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-off" value="Off-Ramp / Route Out" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="712" y="192" width="120" height="24" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PHASE I — INTAKE
+    ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="sect1" value="I.  INTAKE" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=11;fontColor=#5a7a99;" vertex="1" parent="1">
+      <mxGeometry x="590" y="120" width="100" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- START -->
+    <mxCell id="n-start" value="Use Case Submitted&#xa;(AI CoE Hub)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;arcSize=50;" vertex="1" parent="1">
+      <mxGeometry x="340" y="60" width="200" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- FDE Initial Review -->
+    <mxCell id="n-review" value="FDE Initial Review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="150" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Gate: Worth FDE? -->
+    <mxCell id="g-worth" value="Worth FDE&#xa;Engagement?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="350" y="230" width="180" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Off-ramp: Route Out -->
+    <mxCell id="off-route" value="Route Out&#xa;Platform Team / Data Tower&#xa;Self-Serve / No Action" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="30" y="248" width="220" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Intro Meeting -->
+    <mxCell id="n-intro" value="Intro Meeting with Business&#xa;(set FDE context &amp; expectations)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="370" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Deep Dive Meeting -->
+    <mxCell id="n-deepdive" value="Deep Dive Meeting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="450" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Fill Intake Template & Shadow Session -->
+    <mxCell id="n-shadow" value="Fill Intake Template&#xa;&amp; Shadow Session" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="530" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Finalize Intake Template -->
+    <mxCell id="n-finalize" value="Finalize Intake Template&#xa;&amp; Identify Remaining Gaps" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="610" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         STAGE GATE 1 — Prototype Decision
+    ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="sg1" value="🔒  STAGE GATE 1 — Prototype Decision&#xa;Should we prototype? / More requirements? / Close? / Route Out?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="310" y="690" width="260" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Off-ramp: Close -->
+    <mxCell id="off-close" value="Close / No Action&#xa;Recommendations Only" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="30" y="690" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Off-ramp: Route Out from SG1 -->
+    <mxCell id="off-sg1-route" value="Route Out&#xa;Platform Team / Data Tower&#xa;Self-Serve / No Action" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="30" y="748" width="200" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PHASE II — SCOPING
+    ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="sect2" value="II.  SCOPING" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=11;fontColor=#5a7a99;" vertex="1" parent="1">
+      <mxGeometry x="590" y="790" width="110" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- Scope Prototype -->
+    <mxCell id="n-scope" value="Scope Prototype&#xa;&amp; Diagram Future State Workflow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="790" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Outline Impact & Present -->
+    <mxCell id="n-impact" value="Outline Expected Impact&#xa;&amp; Present to Business" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="870" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Gate: Business Aligned? -->
+    <mxCell id="g-aligned" value="Business&#xa;Aligned?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="350" y="950" width="180" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PHASE III — PROTOTYPING
+    ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="sect3" value="III.  PROTOTYPING" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=11;fontColor=#5a7a99;" vertex="1" parent="1">
+      <mxGeometry x="590" y="1090" width="140" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- Build Prototype -->
+    <mxCell id="n-proto" value="Build Prototype&#xa;(Type A / B / C)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1090" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Gate: Type D Needed? -->
+    <mxCell id="g-typed" value="Type D Prototype&#xa;Needed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="350" y="1170" width="180" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Alfonso Sign-off Gate (right branch) -->
+    <mxCell id="n-signoff" value="Alfonso &amp; Team&#xa;Gate Sign-off Required" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="620" y="1172" width="190" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Build Type D -->
+    <mxCell id="n-typed" value="Build Type D Prototype&#xa;(Pilot with Real/Production Data)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="620" y="1255" width="190" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Prototype Review -->
+    <mxCell id="n-review2" value="Prototype Review&#xa;with Business" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1330" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Gate: Validates Approach? -->
+    <mxCell id="g-validates" value="Validates&#xa;Approach?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="350" y="1410" width="180" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         STAGE GATE 2 — Handoff Readiness
+    ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="sg2" value="🔒  STAGE GATE 2 — Handoff Readiness&#xa;Is the use case shovel-ready for a pod team?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="310" y="1540" width="260" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PHASE IV — HANDOFF
+    ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="sect4" value="IV.  HANDOFF" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=11;fontColor=#5a7a99;" vertex="1" parent="1">
+      <mxGeometry x="590" y="1635" width="110" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- Generate Handoff Package -->
+    <mxCell id="n-handoffpkg" value="Generate Handoff Package&#xa;(PRD, Requirements, Artifacts, ROI)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1635" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Hand Off to Pod Team -->
+    <mxCell id="n-handoff" value="Hand Off to Pod Team&#xa;(Travis + Katie alignment)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1715" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Gate: Shovel-Ready? -->
+    <mxCell id="g-shovel" value="Shovel-Ready&#xa;Criteria Met?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="350" y="1795" width="180" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PHASE V — BUILD & PRODUCTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="sect5" value="V.  BUILD &amp; PRODUCTION" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=11;fontColor=#5a7a99;" vertex="1" parent="1">
+      <mxGeometry x="590" y="1930" width="200" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- Dev MVP + UAT -->
+    <mxCell id="n-devmvp" value="Dev MVP → UAT / Piloting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="1930" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Production Build -->
+    <mxCell id="n-prod" value="Production Build" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="340" y="2010" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- END -->
+    <mxCell id="n-end" value="Live in Production ✓" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;arcSize=50;" vertex="1" parent="1">
+      <mxGeometry x="340" y="2090" width="200" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         EDGES — Main Flow (top to bottom)
+    ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="e-start-review" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-start" target="n-review" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-review-gworth" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-review" target="g-worth" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Gate: No → Route Out (left) -->
+    <mxCell id="e-gworth-off" value="No" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="g-worth" target="off-route" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Gate: Yes → Intro Meeting -->
+    <mxCell id="e-gworth-intro" value="Yes" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="g-worth" target="n-intro" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-intro-deepdive" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-intro" target="n-deepdive" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-deepdive-shadow" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-deepdive" target="n-shadow" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-shadow-finalize" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-shadow" target="n-finalize" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-finalize-sg1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-finalize" target="sg1" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Stage Gate 1 → Close (No Action, left top) -->
+    <mxCell id="e-sg1-close" value="No Action" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="sg1" target="off-close" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Stage Gate 1 → Route Out (left bottom) -->
+    <mxCell id="e-sg1-route" value="Route Out" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="sg1" target="off-sg1-route" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Stage Gate 1 → Shadow Session (More Requirements — loopback right) -->
+    <mxCell id="e-sg1-shadow" value="More Requirements" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="sg1" target="n-shadow" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="660" y="720" />
+          <mxPoint x="660" y="555" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Stage Gate 1 → Scope (Prototype) -->
+    <mxCell id="e-sg1-scope" value="Prototype" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="sg1" target="n-scope" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-scope-impact" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-scope" target="n-impact" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-impact-galigned" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-impact" target="g-aligned" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Business Aligned? No → back to Scope (left loop) -->
+    <mxCell id="e-galigned-scope" value="Revise Approach" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="g-aligned" target="n-scope" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="290" y="1000" />
+          <mxPoint x="290" y="815" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Business Aligned? Yes → Build Prototype -->
+    <mxCell id="e-galigned-proto" value="Yes" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="g-aligned" target="n-proto" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-proto-gtyped" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-proto" target="g-typed" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Type D? Yes → Alfonso Sign-off (right) -->
+    <mxCell id="e-gtyped-signoff" value="Yes" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="g-typed" target="n-signoff" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Sign-off → Type D Build -->
+    <mxCell id="e-signoff-typed" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-signoff" target="n-typed" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Type D Build → Prototype Review (merge back left) -->
+    <mxCell id="e-typed-review2" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="n-typed" target="n-review2" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="590" y="1280" />
+          <mxPoint x="590" y="1355" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Type D? No → Prototype Review (straight down) -->
+    <mxCell id="e-gtyped-review2" value="No" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="g-typed" target="n-review2" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-review2-gval" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-review2" target="g-validates" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Validates? No → back to Scope (left far loop) -->
+    <mxCell id="e-gval-scope" value="Refine &amp; Rebuild" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="g-validates" target="n-scope" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="270" y="1460" />
+          <mxPoint x="270" y="815" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Validates? Yes → Stage Gate 2 -->
+    <mxCell id="e-gval-sg2" value="Yes" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="g-validates" target="sg2" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Stage Gate 2 → Generate Handoff Package -->
+    <mxCell id="e-sg2-handoffpkg" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="sg2" target="n-handoffpkg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-handoffpkg-handoff" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-handoffpkg" target="n-handoff" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-handoff-gshovel" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-handoff" target="g-shovel" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Shovel-Ready? No → back to Handoff Package (left loop) -->
+    <mxCell id="e-gshovel-handoffpkg" value="Complete Package" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="g-shovel" target="n-handoffpkg" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="290" y="1845" />
+          <mxPoint x="290" y="1660" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Shovel-Ready? Yes → Dev MVP -->
+    <mxCell id="e-gshovel-dev" value="Yes" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="g-shovel" target="n-devmvp" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-dev-prod" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-devmvp" target="n-prod" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e-prod-end" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="n-prod" target="n-end" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

@@ -60,6 +60,8 @@ td.exp-col{padding:4px 6px;text-align:center}
 .note-text{display:block;white-space:pre-wrap;word-break:break-word}
 .note-empty{color:#bbb;font-style:italic;font-size:11px}
 .note-edit{width:100%;min-height:60px;font-size:12px;font-family:inherit;border:1px solid #b0a8f0;border-radius:4px;padding:4px 6px;resize:vertical;outline:none;background:#fffbe6;display:block}
+.followup-cell{cursor:pointer;min-width:150px;max-width:320px}
+.followup-edit{width:100%;min-height:60px;font-size:12px;font-family:inherit;border:1px solid #a8d0f0;border-radius:4px;padding:4px 6px;resize:vertical;outline:none;background:#e8f4ff;display:block}
 </style>
 </head>
 <body>
@@ -69,6 +71,7 @@ td.exp-col{padding:4px 6px;text-align:center}
   <div class="search-wrap"><input type="search" id="search" placeholder="Search use case, product, submitter, area..."></div>
   <button id="col-btn">Columns ▾</button>
   <button id="notes-filter-btn">🗒 Has Notes</button>
+  <button id="followup-filter-btn">📌 Has Follow-Up</button>
   <button id="clear-btn">Clear all filters</button>
   <label>Export: <button id="csv-all-btn">CSV (all)</button> <button id="csv-sel-btn">CSV (selected)</button></label>
 </div>
@@ -98,12 +101,15 @@ const NUM_COLS = new Set(['ID','Total Priority','Total Priority McKensey','Total
 
 const NOTES = JSON.parse(localStorage.getItem('fde-hub-notes') || '{}');
 function saveNotes() { localStorage.setItem('fde-hub-notes', JSON.stringify(NOTES)); }
+const FOLLOWUP = JSON.parse(localStorage.getItem('fde-hub-followup') || '{}');
+function saveFollowUp() { localStorage.setItem('fde-hub-followup', JSON.stringify(FOLLOWUP)); }
 function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 const EXPAND_FIELDS = ['Problem Statement','Description','AI Solution or Tools of Interest','Comments','Executive Summary'];
 let expandedIds = new Set();
 let showNotesOnly = false;
+let showFollowUpOnly = false;
 
-let visibleCols = [...DEFAULT_COLS, 'Notes'];
+let visibleCols = [...DEFAULT_COLS, 'Follow-Up', 'Notes'];
 let filters = {};
 let excludes = {};
 let searchQ = '';
@@ -169,6 +175,7 @@ function applyFilters() {
       if(vals && vals.has(String(r[col]||''))) return false;
     }
     if(showNotesOnly && !NOTES[r['ID']]) return false;
+    if(showFollowUpOnly && !FOLLOWUP[r['ID']]) return false;
     return true;
   });
   filtered.sort((a,b) => {
@@ -207,6 +214,7 @@ function renderTable() {
     const mainRow = '<tr data-rowid="'+id+'">' +
       '<td class="exp-col"><button class="expand-btn" data-expid="'+id+'">'+(isExp?'▼':'▶')+'</button></td>' +
       visibleCols.map(c => {
+        if(c==='Follow-Up'){const fu=FOLLOWUP[id]||'';return `<td class="followup-cell" data-id="${id}">${fu?`<span class="note-text">${escHtml(fu)}</span>`:'<span class="note-empty">+ Add follow-up</span>'}</td>`;}
         if(c==='Notes'){const note=NOTES[id]||'';return `<td class="note-cell" data-id="${id}">${note?`<span class="note-text">${escHtml(note)}</span>`:'<span class="note-empty">+ Add note</span>'}</td>`;}
         const v = r[c];
         if(v==null||v==='') return `<td style="color:#bbb">—</td>`;
@@ -224,7 +232,9 @@ function renderTable() {
     }).join('');
     const noteVal = NOTES[id] || '';
     const noteBlock = `<div class="dp-block"><div class="dp-label">My Notes</div>${noteVal?`<div class="dp-body">${escHtml(noteVal)}</div>`:'<div class="dp-empty">No notes added</div>'}</div>`;
-    const detailRow = `<tr class="detail-row"><td colspan="${colSpan}"><div class="detail-panel">${blocks}${noteBlock}</div></td></tr>`;
+    const fuVal = FOLLOWUP[id] || '';
+    const fuBlock = `<div class="dp-block"><div class="dp-label">Follow-Up</div>${fuVal?`<div class="dp-body">${escHtml(fuVal)}</div>`:'<div class="dp-empty">No follow-up added</div>'}</div>`;
+    const detailRow = `<tr class="detail-row"><td colspan="${colSpan}"><div class="detail-panel">${blocks}${fuBlock}${noteBlock}</div></td></tr>`;
     return [mainRow, detailRow];
   }).join('');
 }
@@ -274,7 +284,13 @@ document.getElementById('notes-filter-btn').onclick = () => {
   document.getElementById('notes-filter-btn').style.borderColor = showNotesOnly ? '#b0a8f0' : '';
   page=0; render();
 };
-document.getElementById('clear-btn').onclick = () => { filters={}; excludes={}; searchQ=''; showNotesOnly=false; document.getElementById('search').value=''; document.getElementById('notes-filter-btn').style.background=''; document.getElementById('notes-filter-btn').style.borderColor=''; buildFilters(); page=0; render(); };
+document.getElementById('followup-filter-btn').onclick = () => {
+  showFollowUpOnly = !showFollowUpOnly;
+  document.getElementById('followup-filter-btn').style.background = showFollowUpOnly ? '#e8f4ff' : '';
+  document.getElementById('followup-filter-btn').style.borderColor = showFollowUpOnly ? '#a8d0f0' : '';
+  page=0; render();
+};
+document.getElementById('clear-btn').onclick = () => { filters={}; excludes={}; searchQ=''; showNotesOnly=false; showFollowUpOnly=false; document.getElementById('search').value=''; document.getElementById('notes-filter-btn').style.background=''; document.getElementById('notes-filter-btn').style.borderColor=''; document.getElementById('followup-filter-btn').style.background=''; document.getElementById('followup-filter-btn').style.borderColor=''; buildFilters(); page=0; render(); };
 document.getElementById('psize').onchange = e => { pageSize=Number(e.target.value); page=0; render(); };
 document.getElementById('prev').onclick = () => { if(page>0){page--;render();} };
 document.getElementById('next').onclick = () => { page++; render(); };
@@ -284,13 +300,13 @@ document.getElementById('col-btn').onclick = () => {
   if(p.style.display==='block') buildColPanel();
 };
 function exportCSV(cols, filename) {
-  const rows = [cols.join(','), ...filtered.map(r => cols.map(c => JSON.stringify(c==='Notes'?(NOTES[r['ID']]||''):r[c]??'')).join(','))];
+  const rows = [cols.join(','), ...filtered.map(r => cols.map(c => JSON.stringify(c==='Notes'?(NOTES[r['ID']]||''):c==='Follow-Up'?(FOLLOWUP[r['ID']]||''):r[c]??'')).join(','))];
   const a = document.createElement('a');
   a.href = 'data:text/csv,' + encodeURIComponent(rows.join('\n'));
   a.download = filename;
   a.click();
 }
-document.getElementById('csv-all-btn').onclick = () => exportCSV([...ALL_COLS, 'Notes'], 'ai_use_case_hub_all.csv');
+document.getElementById('csv-all-btn').onclick = () => exportCSV([...ALL_COLS, 'Follow-Up', 'Notes'], 'ai_use_case_hub_all.csv');
 document.getElementById('csv-sel-btn').onclick = () => exportCSV(visibleCols, 'ai_use_case_hub_selected.csv');
 
 document.querySelector('.table-wrap').addEventListener('click', e => {
@@ -299,6 +315,23 @@ document.querySelector('.table-wrap').addEventListener('click', e => {
     const id = expBtn.dataset.expid;
     if(expandedIds.has(id)) expandedIds.delete(id); else expandedIds.add(id);
     renderTable();
+    return;
+  }
+  const fuCell = e.target.closest('.followup-cell');
+  if(fuCell && !fuCell.querySelector('textarea')) {
+    const id = fuCell.dataset.id;
+    fuCell.innerHTML = '';
+    const ta = document.createElement('textarea');
+    ta.className = 'followup-edit';
+    ta.value = FOLLOWUP[id] || '';
+    fuCell.appendChild(ta);
+    ta.focus();
+    ta.addEventListener('blur', () => {
+      const val = ta.value.trim();
+      if(val) FOLLOWUP[id] = val; else delete FOLLOWUP[id];
+      saveFollowUp();
+      fuCell.innerHTML = val ? `<span class="note-text">${escHtml(val)}</span>` : '<span class="note-empty">+ Add follow-up</span>';
+    });
     return;
   }
   const cell = e.target.closest('.note-cell');
