@@ -98,9 +98,6 @@ The message must:
 - Close with a **Coming Up / Next Steps** section listing 2–4 concrete upcoming actions or meetings
 - Stay under ~250 words total — this is a channel post, not a report
 
-Wrap the entire message in a fenced code block (` ```
- `) so the user gets a one-click copy button in VS Code and Obsidian.
-
 ## Step 6 — Generate Action Items Teams Message
 
 After Step 5, produce a second Teams message containing the full, detailed list of action items for the day. Use Teams-native formatting that renders correctly when pasted:
@@ -116,9 +113,6 @@ The message must:
 - Each bullet must include: task description, *Due: <date or TBD>*, and priority in brackets — [High], [Medium], or [Low]
 - If an owner has no tasks, omit them
 - Close with a bold total count line: **Total action items: N**
-
-Wrap the entire message in a fenced code block (` ```
- `) so the user gets a one-click copy button in VS Code and Obsidian.
 
 ## Constraints
 
