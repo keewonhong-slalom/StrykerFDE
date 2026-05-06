@@ -13,14 +13,18 @@ Reference artifact: `Stryker_UseCase_Scoring_Template.xlsx`
 1. Intro the business to what FDE is and the purpose of the team, what to expect
 2. Create context repo & add context
 3. Deep dive meeting
-4. Fill out intake template based on deep dive; identify gaps in understanding & remaining questions
-5. Prep data spec specific to use case
-6. Conduct shadow session with business users to fill gaps and inform solutioning
-7. Identify reusable components that will be developed or leveraged as part of the prototype
-8. Scope the prototype
-   - Identify the full scope (if this was productionized, what would it encompass)
-   - Decide what makes sense to break off (one data subset, one workflow step, lower threshold for accuracy, etc.)
-9. Diagram the future state workflow
+	*Key questions to get answers to (NB: not an exhaustive list)*
+	1. Who are we solving for?
+	2. What are the jobs to be done?
+	3. What differentiates the AI solution from the current state?
+5. Fill out intake template based on deep dive; identify gaps in understanding & remaining questions
+6. Prep data/tech spec specific to use case
+7. Conduct shadow session with business users to fill gaps and inform solutioning
+8. Identify reusable components that will be developed or leveraged as part of the prototype
+9. Scope the prototype
+	   - Identify the full scope (if this was productionized, what would it encompass)
+	   - Decide what makes sense to break off (one data subset, one workflow step, lower threshold for accuracy, etc.)
+10. Diagram the future state workflow
    - Show the roles, handoffs, AI integrations, inputs to the AI, AI outputs, review steps
 10. Outline expected impact from full solution & from prototype
     - This does not include creating a detailed business case or drilling into all the stats around the current process — more so determining what a reasonable expectation of accuracy is and the automation that could result, the amount of time still required
